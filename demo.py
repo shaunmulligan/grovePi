@@ -7,3 +7,4 @@ import struct
 
 while 1: 
 	print "hello python!"
+	time.sleep(20)
