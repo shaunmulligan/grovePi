@@ -7,4 +7,4 @@ import struct
 
 from subprocess import call
 print "checking i2c"
-call(["i2cdetect", "-y 1"])
+call(["i2cdetect -y 1", ], shell=True)
