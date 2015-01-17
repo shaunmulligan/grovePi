@@ -12,5 +12,5 @@ RUN pip install RPi.GPIO
 
 COPY . /app
 
-CMD ["python", "/app/firmware_version.py"]
+CMD ["python", "/app/demo.py"]
 
