@@ -9,7 +9,7 @@ RUN echo i2c-dev >> /etc/modules
 RUN echo i2c-bcm2708 >> /etc/modules
 RUN echo spi-dev >> /etc/modules
 RUN pip install RPi.GPIO
-
+RUN cat /etc/modules
 COPY . /app
 
 CMD ["python", "/app/demo.py"]
