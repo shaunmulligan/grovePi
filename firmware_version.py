@@ -18,9 +18,11 @@ while True:
         [temp,humidity] = grovepi.dht(sensor,1)
         print "temp =", temp, " humidity =", humidity
         oled_setTextXY(0,0)
-    	oled_putString("Temp =", temp," C")
+        tempStr = "Temp = "+ str(temp)+" C"
+    	oled_putString(tempStr)
     	oled_setTextXY(1,0)
-    	oled_putString("Humidity =", humidity)
+    	humStr = "Humidity = "+ str(humidity)
+    	oled_putString(humStr)
         time.sleep(30)
     except IOError:
         print "Error"
