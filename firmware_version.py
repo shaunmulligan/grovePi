@@ -8,10 +8,6 @@ oled_setNormalDisplay()
 oled_setVerticalMode()
 time.sleep(.1)
 
-print "hello world to screen"
-for i in range(0,12):
-    oled_setTextXY(i,0)
-    oled_putString("Hello World")
 
 # Connect the Grove Temperature & Humidity Sensor Pro to digital port D4
 # SIG,NC,VCC,GND
@@ -21,6 +17,10 @@ while True:
     try:
         [temp,humidity] = grovepi.dht(sensor,1)
         print "temp =", temp, " humidity =", humidity
+        oled_setTextXY(0,0)
+    	oled_putString("Temp =", temp," C")
+    	oled_setTextXY(1,0)
+    	oled_putString("Humidity =", humidity)
         time.sleep(30)
     except IOError:
         print "Error"
