@@ -12,3 +12,5 @@ while True:
         time.sleep(30)
     except IOError:
         print "Error"
+    except TypeError:
+    	print "Error"
